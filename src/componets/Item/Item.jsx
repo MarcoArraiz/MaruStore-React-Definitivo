@@ -1,4 +1,3 @@
-
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
@@ -12,10 +11,9 @@ function Item( { id, nombre, precio, img } ) {
                 <p>Precio: {precio}</p>
                 <p>ID: {id}</p>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    Descripcion
                 </Card.Text>
-                <Link to={`/item/${id}`}>Ver Detalles</Link>
+                <Link class="btn btn-dark" to={`/item/${id}`}>Ver Detalles</Link>
             </Card.Body>
         </Card>
     );
