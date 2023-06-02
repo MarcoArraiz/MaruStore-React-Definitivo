@@ -3,6 +3,7 @@ import { getProductos, getProductosPorCategoria } from '../../asyncmock'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom';
 import "./ItemListContainer.css"
+import Carrusel from '../Carrusel/Carrusel';
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
@@ -21,7 +22,8 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <h2 className='titulo'>Productos</h2>
+            <Carrusel/>
+            <h2 class="titulo-secciones mt-2 text-light bg-dark titulo container-fluid">Productos</h2>
             <ItemList productos={productos} />
         </div>
     )
