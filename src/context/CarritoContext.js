@@ -1,12 +1,10 @@
 import { useState, createContext } from "react";
 
 
-export const CarritoContext = createContext({ carrito: [] });
+export const CarritoContext = createContext({ carrito:[]});
 
 export const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
-
-    console.log(carrito);
 
     const agregarProducto = (item, cantidad) => {
         if (!yaEstaEnCarrito(item.id)) {
