@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import './CartWidget.css'
 
 const CartWidget = () => {
-    const { carrito } = useContext(CarritoContext);
+    const { cantidadTotal } = useContext(CarritoContext);
+
     const imgCarrito = "../img/cart.png";
 
     return (
