@@ -1,17 +1,17 @@
 import { useState } from 'react'
 
-const ItemCount = ({inicial, stock, funcionAgregar}) => {
-    
+const ItemCount = ({ inicial, stock, funcionAgregar }) => {
+
     const [contador, setContador] = useState(inicial);
 
     const incrementar = () => {
-        if(contador < stock) {
+        if (contador < stock) {
             setContador(contador + 1);
         }
     }
 
     const decrementar = () => {
-        if(contador > inicial){
+        if (contador > inicial) {
             setContador(contador - 1);
         }
     }

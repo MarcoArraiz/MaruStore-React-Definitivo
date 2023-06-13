@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBNrpUaVzARgptzqhHg6UO3jy9AL3Vxf2I",
-    authDomain: "marustore-a1373.firebaseapp.com",
-    projectId: "marustore-a1373",
-    storageBucket: "marustore-a1373.appspot.com",
-    messagingSenderId: "839833268210",
-    appId: "1:839833268210:web:d86128450141528be6c56b"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: "marustore-react.firebaseapp.com",
+    projectId: "marustore-react",
+    storageBucket: "marustore-react.appspot.com",
+    messagingSenderId: "434577037110",
+    appId: "1:434577037110:web:ffb6d370118ba4384dc597"
 };
 
 const app = initializeApp(firebaseConfig);
