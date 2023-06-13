@@ -5,7 +5,7 @@ import { collection, addDoc } from "firebase/firestore"
 import './Checkout.css';
 
 const Checkout = () => {
-    const { carrito, vaciarCarrito } = useContext(CarritoContext);
+    const { carrito, vaciarCarrito, total } = useContext(CarritoContext);
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -61,8 +61,10 @@ const Checkout = () => {
                     <div key={producto.item.id}>
                         <p> {producto.item.nombre} x {producto.cantidad} </p>
                         <p>Precio: $ {producto.item.precio} </p>
+                        <p>Total a pagar: $ {total} </p>
                         <hr />
                     </div>
+
                 ))}
                 <hr />
 
